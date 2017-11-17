@@ -1,0 +1,6 @@
+table1<- read.table("C:/Users/Aparna Sathyan/Desktop/Aparna cousera/course 4/household_power_consumption.txt", header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
+subSetData <- subset(table1,table1$Date=="1/2/2007" | table1$Date =="2/2/2007")
+png("C:/Users/Aparna Sathyan/Desktop/Aparna cousera/course 4/Plot1.png",width = 480, height = 480, units = "px",bg="white")
+hist(as.numeric(subSetData$Global_active_power),col="red",main="Global Active Power",xlab="Global Active Power(kilowatts)")
+title(main="Global Active Power")
+dev.off()
